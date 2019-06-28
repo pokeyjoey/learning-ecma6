@@ -1,0 +1,33 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+
+        <title>ES6 Class Syntax</title>
+        <meta name="description" content="Javascript Test Code">
+        <meta name="author" content="Jeff Roche">
+
+        <script "text/javascript">
+
+            class Vehicle {
+                constructor(description, wheels) {
+                    this.description = description;
+                    this.wheels = wheels;
+                }
+
+                describeYourself() {
+                        console.log(`I am a ${this.description} with ${this.wheels} wheels`);
+                }
+            }
+           
+            var coolSkiVan = new Vehicle('cool ski van', 4);
+            coolSkiVan.describeYourself();
+
+        </script>
+
+    </head>
+
+    <body>
+    </body>
+</html>

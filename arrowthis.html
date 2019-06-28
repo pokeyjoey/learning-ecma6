@@ -1,0 +1,45 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+
+        <title>Arrow Functions and this</title>
+        <meta name="description" content="Javascript Test Code">
+        <meta name="author" content="Jeff Roche">
+
+        <script "text/javascript">
+
+            var person = {
+                first: "Doug",
+                actions: ["bike", "hike","ski","surf"],
+                printActions: function() {
+                    this.actions.forEach(function(action){
+                        var str = this.first + " likes to " + action;
+                        console.log(str);
+                    }.bind(this));
+                }
+            };
+            console.log("old function syntax");
+            person.printActions();
+
+            var person = {
+                first: "Doug",
+                actions: ["bike", "hike","ski","surf"],
+                printActions() {
+                    this.actions.forEach((action) => {
+                        var str = this.first + " likes to " + action;
+                        console.log(str);
+                    });
+                }
+            };
+            console.log("enhanced object syntax and arrow functions");
+            person.printActions();
+
+       </script>
+
+    </head>
+
+    <body>
+    </body>
+</html>

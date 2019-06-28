@@ -1,0 +1,49 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+
+        <title>Async and Await</title>
+        <meta name="description" content="Javascript Test Code">
+        <meta name="author" content="Jeff Roche">
+
+        <script "text/javascript">
+
+            const delay = seconds => {
+                return new Promise(
+                        resolve => setTimeout(resolve, seconds * 1000)
+                )
+            };
+
+            const countToFive = async() => {
+                    console.log('countToFive zero seconds');
+                    await delay(1);
+                    console.log('countToFive one second');
+                    await delay(1);
+                    console.log('countToFive two seconds');
+                    await delay(3);
+                    console.log('countToFive five seconds');
+            };
+            console.log('countToFive async start');
+            countToFive();
+
+            const countToFiveNoAsync = () => {
+                    console.log('countToFiveNoAsync zero seconds');
+                    delay(1);
+                    console.log('countToFiveNoAsync one second');
+                    delay(1);
+                    console.log('countToFiveNoAsync two seconds');
+                    delay(3);
+                    console.log('countToFiveNoAsync five seconds');
+            };
+            console.log('countToFiveNoAsync start');
+            countToFiveNoAsync();
+
+        </script>
+
+    </head>
+
+    <body>
+    </body>
+</html>

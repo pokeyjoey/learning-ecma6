@@ -1,0 +1,45 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+
+        <title>Destructuring assignment</title>
+        <meta name="description" content="Javascript Test Code">
+        <meta name="author" content="Jeff Roche">
+
+        <script "text/javascript">
+
+            var [first,,, fourth,] = ["spokane", "Boston", "Los Angelos", "Seatlle", "Portland"];
+            console.log(first);
+            console.log(fourth);
+
+            var {title, price} = {
+                title: "Rueben",
+                price: 7,
+                description: "Clevelands favorite sandwich",
+                ingredients: ["bread", "corned beef", "dressing", "sauerkraut", "cheese"]
+            };
+            console.log(title);
+            console.log(price);
+
+
+            var vacation = {
+                destination: "Chile",
+                travelors: 2,
+                activity: "skiing",
+                cost: 4000
+            };
+
+            function vacationMarketing({destination, activity}) {
+                return `Come to ${destination} and do some ${activity}`
+            }
+            console.log(vacationMarketing(vacation));
+                
+       </script>
+
+    </head>
+
+    <body>
+    </body>
+</html>

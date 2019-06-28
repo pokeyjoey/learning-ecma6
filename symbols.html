@@ -1,0 +1,29 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+
+        <title>Symbols</title>
+        <meta name="description" content="Javascript Test Code">
+        <meta name="author" content="Jeff Roche">
+
+        <script "text/javascript">
+
+            const id = Symbol();
+            const courseInfo = {
+                title: "ES6",
+                topics: ["babel", "syntax", "functions", "classes"],
+                id: "js-course"
+            };
+        
+            courseInfo[id] = 41284;
+            console.log(courseInfo);
+
+        </script>
+
+    </head>
+
+    <body>
+    </body>
+</html>

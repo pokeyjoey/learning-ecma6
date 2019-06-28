@@ -1,0 +1,42 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+
+        <title>Building Promises</title>
+        <meta name="description" content="Javascript Test Code">
+        <meta name="author" content="Jeff Roche">
+
+        <script "text/javascript">
+
+            const spacePeople = () => {
+                return new Promise((resolves, rejects) => {
+                    const api = 'http://api.open-notify.org/astros.json';
+                    const request = new XMLHttpRequest();
+                    request.open('GET', api);
+                    request.onload = () => {
+                        if (request.status === 200) {
+                            resolves(JSON.parse(request.response));
+                        } else {
+                            rejects(Error(request.statusText));
+                        }
+                    };
+                    request.onerror = err => rejects(err);
+                    requests.send();
+                });
+            };
+
+            spacePeople().then(
+                    spaceData => console.log(spaceData),
+                    err => console.error(
+                        new Error('Cannot load space people')
+                    )
+            );
+        </script>
+
+    </head>
+
+    <body>
+    </body>
+</html>
