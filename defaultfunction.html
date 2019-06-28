@@ -1,0 +1,32 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+
+        <title>Default function parameters</title>
+        <meta name="description" content="Javascript Test Code">
+        <meta name="author" content="Jeff Roche">
+
+        <script "text/javascript">
+         
+            /*
+            function add(x=5,y=7) {
+                console.log(x+y);
+            }
+            add();
+            add(1,1);
+            */
+
+            function haveFun(activityName="running", time=3) {
+                console.log(`Today I will go ${activityName} for ${time} hours.`);
+            }
+            haveFun('biking', 5);
+
+        </script>
+
+    </head>
+
+    <body>
+    </body>
+</html>

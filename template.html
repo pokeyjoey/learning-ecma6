@@ -1,0 +1,36 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+
+        <title>Template Strings</title>
+        <meta name="description" content="Javascript Test Code">
+        <meta name="author" content="Jeff Roche">
+
+        <script "text/javascript">
+            function createEmail(firstName, purchasePrice) {
+                var shipping = 5.95;
+                console.log(
+                        `Hi ${firstName}, thanks for buying from us!
+                            Total: $${purchasePrice}
+                            Shipping: $${shipping}
+                            Grand Total: $${purchasePrice + shipping};
+                        `
+                        );
+            }
+            createEmail("John Carter", 100);
+
+            /*
+            function print(firstName) {
+                console.log(`Hello ${firstName}`);
+            }
+            print("Jeff");
+             */
+        </script>
+
+    </head>
+
+    <body>
+    </body>
+</html>

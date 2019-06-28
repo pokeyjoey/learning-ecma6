@@ -1,0 +1,38 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+
+        <title>Map type</title>
+        <meta name="description" content="Javascript Test Code">
+        <meta name="author" content="Jeff Roche">
+
+        <script "text/javascript">
+           // Maps are similiar to python dictionaries, but they maintain order. 
+            var course = new Map();
+            course.set('react', {description: 'ui'});
+            course.set('jest', {description: 'testing'});
+
+            console.log(course);
+            console.log(course.react);
+            console.log(course.get('react'));
+
+            var details = new Map([
+                    [new Date(), 'today'],
+                    ['items', [1,2]]
+            ]);
+
+            console.log(details.size);
+            details.forEach(
+                    function(item){
+                        console.log(item);
+                    }
+            );
+        </script>
+
+    </head>
+
+    <body>
+    </body>
+</html>

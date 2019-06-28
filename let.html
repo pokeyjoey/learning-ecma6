@@ -1,0 +1,41 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+          <meta charset="utf-8">
+
+            <title>Javascript Test Code</title>
+              <meta name="description" content="Javascript Test Code">
+                <meta name="author" content="Jeff RocheSitePoint">
+            <style type="text/css">
+                section > div {
+                    height: 100px;
+                    width: 100px;
+                    background-color: red;
+                    float: left;
+                    margin: 3px;
+                    cursor: pointer;
+                }
+            </style>
+
+    </head>
+
+    <body>
+        <header>
+            <h1>click on a box</h1>
+
+        </header>
+        <section></section>
+        <script "text/javascript">
+            // Let allows you to create variables with block scope instead of javascripts functional scope.
+            for(let i=0; i<45; i++){
+                var div = document.createElement('div');
+                div.onclick = function() {
+                    alert("you clicked on a box number " + i);
+                };
+                document.getElementsByTagName('section')[0].appendChild(div);
+            }
+
+        </script>
+    </body>
+</html>
